@@ -93,8 +93,9 @@ botonesCategorias.forEach(boton => boton.addEventListener("click", () => {
 }))
 
 
-function cargarProductos() {
+function cargarProductos(productosElegidos) {
 
+    contenedorProductos.innerHTML = "";
 
     productosElegidos.forEach(producto => {
 
@@ -111,14 +112,13 @@ function cargarProductos() {
 
         contenedorProductos.append(div);
     })
-    actualizarBotonesAgregar();
+        actualizarBotonesAgregar(productos)
+
 }
-cargarProductos()
 
-
+cargarProductos(productos)
 botonesCategorias.forEach(boton => {
     boton.addEventListener("click", (e) => {
-
         botonesCategorias.forEach(boton => boton.classList.remove("active"));
         e.currentTarget.classList.add("active");
 
@@ -131,7 +131,6 @@ botonesCategorias.forEach(boton => {
             tituloPrincipal.innerText = "Todos los productos";
             cargarProductos(productos);
         }
-
     })
 });
 
@@ -142,39 +141,18 @@ function actualizarBotonesAgregar() {
         boton.addEventListener("click", agregarAlCarrito);
     });
 }
-
 let productosEnCarrito;
-
 let productosEnCarritoLS = localStorage.getItem("productos-en-carrito");
 
-if (productosEnCarritoLS) {
+if(productosEnCarritoLS){
     productosEnCarrito = JSON.parse(productosEnCarritoLS);
+    
     actualizarNumerito();
-} else {
+} else{
     productosEnCarrito = [];
 }
 
 function agregarAlCarrito(e) {
-
-    Toastify({
-        text: "Producto agregado",
-        duration: 3000,
-        close: true,
-        gravity: "top",
-        position: "right",
-        stopOnFocus: true,
-        style: {
-          background: "linear-gradient(to right, #4b33a8, #785ce9)",
-          borderRadius: "2rem",
-          textTransform: "uppercase",
-          fontSize: ".75rem"
-        },
-        offset: {
-            x: '1.5rem',
-            y: '1.5rem'
-          },
-        onClick: function(){}
-      }).showToast();
 
     const idBoton = e.currentTarget.id;
     const productoAgregado = productos.find(producto => producto.id === idBoton);
@@ -189,7 +167,7 @@ function agregarAlCarrito(e) {
 
     actualizarNumerito();
 
-    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito));
+    localStorage.setItem("productos-en-carrito", JSON.stringify(productosEnCarrito))
 }
 
 function actualizarNumerito() {
