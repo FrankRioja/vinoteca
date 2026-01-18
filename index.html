@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Vinoteca</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.9.1/font/bootstrap-icons.css">
+    <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/npm/toastify-js/src/toastify.min.css">
+    <link rel="stylesheet" href="./css/estilos.css">
+</head>
+<body>
+    
+    <div class="wrapper">
+        <aside>
+            <header>
+                <h1 class="logo">Vinoteca</h1>
+            </header>
+            <nav>
+                <ul class="menu">
+                    <li><button id="todos" class="boton-menu boton-categoria active">Todos los Vinos</button></li>
+                    <li><button id="Cabernet" class="boton-menu boton-categoria">Vinos Malbec</button></li>
+                    <li><button id="Malbec" class="boton-menu boton-categoria">Vinos Cabernet</button></li>
+                    <li><a class="boton-carrito" href="./carrito.html">Carrito <span id="numerito" class="numerito">0</span></a></li>
+                </ul>
+            </nav>
+
+            <footer>
+                <p class="texto-footer">Ⓒ 2026 Vinoteca</p>
+            </footer>
+
+        </aside>
+
+        <main>
+            <h2 class="titulo-principal" id="titulo-principal">Todos los Productos</h2>
+            <div id="contenedor-productos" class="contenedor-productos">
+                
+            </div>
+        </main>
+    </div>
+
+    <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/toastify-js"></script>
+    <script src="./js/main.js"></script>
+    <script src="./js/menu.js"></script>
+
+
+
+</body>
+</html>

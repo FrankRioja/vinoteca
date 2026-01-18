@@ -1,0 +1,82 @@
+[
+    {
+        "id": "vinoc-01",
+        "titulo": "Vino Cabernet 01",
+        "imagen": "./img/vinoc-01.jfif",
+        "categoria": {
+            "nombre": "Vinos Cabernet",
+            "id": "Cabernet"
+        },
+        "precio": 1000
+    },
+    {
+        "id": "vinoc-02",
+        "titulo": "Vino Cabernet 02",
+        "imagen": "./img/vinoc-02.jfif",
+        "categoria": {
+            "nombre": "Vinos Cabernet",
+            "id": "Cabernet"
+        },
+        "precio": 950
+    },
+      {
+        "id": "vinoc-03",
+        "titulo": "Vino Cabernet 03",
+        "imagen": "./img/vinoc-03.jfif",
+        "categoria": {
+            "nombre": "Vinos Cabernet",
+            "id": "Cabernet"
+        },
+        "precio": 1250
+    },
+      {
+        "id": "vinoc-04",
+        "titulo": "Vino Cabernet 04",
+        "imagen": "./img/vinoc-04.jfif",
+        "categoria": {
+            "nombre": "Vinos Cabernet",
+            "id": "Cabernet"
+        },
+        "precio": 1900
+    },
+      {
+        "id": "vinom-01",
+        "titulo": "Vino Malbec 01",
+        "imagen": "./img/vinom-01.webp",
+        "categoria": {
+            "nombre": "Vinos Malbec",
+            "id": "Malbec"
+        },
+        "precio": 800
+    },
+      {
+        "id": "vinom-02",
+        "titulo": "Vino Malbec 02",
+        "imagen": "./img/vinom-02.webp",
+        "categoria": {
+            "nombre": "Vinos Malbec",
+            "id": "Malbec"
+        },
+        "precio": 1420
+    },
+      {
+        "id": "vinom-03",
+        "titulo": "Vino Malbec 03",
+        "imagen": "./img/vinom-03.webp",
+        "categoria": {
+            "nombre": "Vinos Malbec",
+            "id": "Malbec"
+        },
+        "precio": 1520
+    },
+      {
+        "id": "vinom-04",
+        "titulo": "Vino Malbec 04",
+        "imagen": "./img/vinom-04.jpg",
+        "categoria": {
+            "nombre": "Vinos Malbec",
+            "id": "Malbec"
+        },
+        "precio": 1350
+    }
+]
