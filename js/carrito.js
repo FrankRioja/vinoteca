@@ -20,14 +20,14 @@ if (productosEnCarrito && productosEnCarrito.length > 0) {
     contenedorCarritoAcciones.classList.remove("disabled")
     contenedorCarritoComprado.classList.add("disabled")
 
-    contenedorProductos.innerHTML = "";
+    contenedorCarritoProductos.innerHTML = "";
 
     productosEnCarrito.forEach(producto => {
     const div = document.createElement("div")
     div.classList.add("carrito-producto")
     div.innerHTML =`
     <img class= "carrito-producto-imagen" src="${producto.imagen}" alt="${producto.titulo}">
-        div class="carrito-producto-titulo">
+        <div class="carrito-producto-titulo">
         <small>Título</small>
         <h3>${producto.titulo}</h3>
     </div>
@@ -71,7 +71,7 @@ function actualizarBotonesEliminar(){
 }
 
 function eliminarDelCarrito(e) {
-    const idboton = e.currentTarget.id;
+    const idBoton = e.currentTarget.id;
     const index = productosEnCarrito.findIndex(producto => producto.id === idBoton);
     productosEnCarrito.splice(index, 1);
     cargarProductosCarrito();
@@ -93,8 +93,8 @@ function vaciarCarrito() {
 
 
 function actualizarTotal() {
-    const totalCalculado =productosEnCarrito.reduce((acc, producto) => acc+ (producto.precio * producto.cantidad), 0);
-    contenedortotal.innerText = `$${totalCalculado}`;
+    const totalCalculado = productosEnCarrito.reduce((acc, producto) => acc+ (producto.precio * producto.cantidad), 0);
+    contenedorTotal.innerText = `$${totalCalculado}`;
 }
 
 botonComprar.addEventListener("click", comprarCarrito);
